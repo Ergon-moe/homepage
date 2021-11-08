@@ -10,9 +10,9 @@ button{
 }
 
 .reduce-width{
-  width: 80%; 
-  text-align: center; 
-  margin: 0 auto; 
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* ALERT */
@@ -34,7 +34,7 @@ button{
   padding-top: 50px;
   transition: 0.7s all;
   z-index: 100;
-  background-color: #0056C0;
+  background-color: #162d50;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
@@ -50,7 +50,7 @@ button{
 .topnav-download button:hover{
   transition: .3s;
   background-color: white;
-  color: #0056C0;
+  color: #162d50;
 }
 
 .shrink{
@@ -59,7 +59,7 @@ button{
   padding-top: 20px;
   transition: 0.7s all;
   z-index: 100;
-  background-color: #0056C0;
+  background-color: #162d50;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
@@ -178,7 +178,7 @@ button{
 }
 
 #menu a li:hover {
-  color: #0056C0;
+  color: #162d50;
   /* #00abff*/
   padding-right: 3px;
 }
@@ -237,7 +237,7 @@ button{
 /*HERO*/
 /*
 .hero{
-  background-color: #0056C0;
+  background-color: #162d50;
   color: white;
 }
 */
@@ -268,7 +268,7 @@ button{
   font-size: 3rem;
 }
 .description{
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .picture{
@@ -329,18 +329,18 @@ button{
 
 /* IMAGE */
 .image{
-  background-repeat:no-repeat; 
+  background-repeat:no-repeat;
 
-background-image:  
-/* 2) Gradient              */ linear-gradient(to right, white, white), 
+background-image:
+/* 2) Gradient              */ linear-gradient(to right, white, white),
 /* 3) Color(using gradient) */ linear-gradient(to right, #F6F6F6, #F6F6F6);
 
-background-position: 
+background-position:
 /* 2) Gradient position     */ 0 0,
 /* 3) Color position        */ 0 100%;
 
-background-size:  
-/* 2) Gradient size         */ 100% 60%, 
+background-size:
+/* 2) Gradient size         */ 100% 60%,
 /* 3) Color size            */ 100% 40%;
 }
 
@@ -352,38 +352,38 @@ background-size:
 
 /* ABOUT */
 .about{
-  background-repeat:no-repeat; 
-  background-image:  
-  /* 2) Gradient              */ linear-gradient(to right, #F6F6F6, #F6F6F6), 
+  background-repeat:no-repeat;
+  background-image:
+  /* 2) Gradient              */ linear-gradient(to right, #F6F6F6, #F6F6F6),
   /* 3) Color(using gradient) */ linear-gradient(to right, white, white);
 
-  background-position: 
+  background-position:
   /* 2) Gradient position     */ 0 0,
   /* 3) Color position        */ 0 100%;
 
-  background-size:  
-  /* 2) Gradient size         */ 100% 50%, 
+  background-size:
+  /* 2) Gradient size         */ 100% 50%,
   /* 3) Color size            */ 100% 50%;
 }
 .about-inverse{
-  background-repeat:no-repeat; 
-  background-image:  
+  background-repeat:no-repeat;
+  background-image:
   /* 2) Gradient              */ linear-gradient(to right, white, white),
   /* 3) Color(using gradient) */ linear-gradient(to right, #F6F6F6, #F6F6F6);
 
-  background-position: 
+  background-position:
   /* 2) Gradient position     */ 0 0,
   /* 3) Color position        */ 0 100%;
 
-  background-size:  
-  /* 2) Gradient size         */ 100% 50%, 
+  background-size:
+  /* 2) Gradient size         */ 100% 50%,
   /* 3) Color size            */ 100% 50%;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px; /* 5px rounded corners */
     width: 100%;
-    background-color: #0056C0;
+    background-color: #162d50;
     color: white;
 }
 
@@ -404,9 +404,14 @@ background-size:
   background-color: #F6F6F6;
 }
 
+/* ECOSYSTEM */
+.ecosystem{
+  text-align: center;
+}
+
 .bounties-button{
   text-decoration: none;
-  background-color: #0056C0;
+  background-color: #162d50;
   color: white;
 }
 
@@ -424,7 +429,7 @@ background-size:
   border-top-color: #004fb0;
 }
 
-.bounties-card:hover{ 
+.bounties-card:hover{
      box-shadow: 1px 8px 20px rgba(0,0,0,0.2);
     -webkit-transition:  box-shadow 1s ease-in;
 }
@@ -435,9 +440,10 @@ background-size:
 /* FOOTER */
 footer{
   padding: 3em;
-  background-color: #0056C0;
+  background-color: #162d50;
   color: white;
   text-align: center;
+  word-wrap: break-word;
 }
 
 footer a {
