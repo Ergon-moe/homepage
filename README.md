@@ -1,2 +1,2 @@
-# electroncash.org
-electroncash.org
+# Ergon.moe
+Ergon.moe
