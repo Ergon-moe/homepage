@@ -30,8 +30,8 @@ button{
 .erasable-header {
   position: fixed;
   width: 100%;
-  margin-top: -3.5rem;
-  padding-top: 50px;
+  margin: 0;
+  padding: 1rem 0 0 0;
   transition: 0.7s all;
   z-index: 100;
   background-color: #162d50;
@@ -56,7 +56,7 @@ button{
 .shrink{
   position: fixed;
   width: 100%;
-  padding-top: 20px;
+  padding: 1rem 0 0 0;
   transition: 0.7s all;
   z-index: 100;
   background-color: #162d50;
