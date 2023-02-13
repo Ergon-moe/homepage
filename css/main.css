@@ -15,49 +15,24 @@ button{
   margin: 0 auto;
 }
 
-/* ALERT */
-.alert {
-  position: relative;
-	height: 2.5rem;
-  background: #EE6969;
-  padding: 0.5rem;
-  text-align: center;
-  color: white;
-  z-index: 102;
-}
 
 /* HEADER */
 .erasable-header {
   position: fixed;
   width: 100%;
   margin: 0;
-  padding: 1rem 0 0 0;
-  transition: 0.7s all;
+  padding: 1rem 0 1rem 0;
+  transition: 0.1s all;
   z-index: 100;
   background-color: #162d50;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.topnav-download{
-  padding-top: 1px;
-}
-.topnav-download button{
-  color: white;
-  border-color: white;
-  text-align: right;
-}
-
-.topnav-download button:hover{
-  transition: .3s;
-  background-color: white;
-  color: #162d50;
-}
-
 .shrink{
   position: fixed;
   width: 100%;
-  padding: 1rem 0 0 0;
-  transition: 0.7s all;
+  padding: 0rem 0 0rem 0;
+  transition: 0.1s all;
   z-index: 100;
   background-color: #162d50;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -80,17 +55,20 @@ button{
 }
 
 .topnav-a{
-  padding-top: 0.5em;
+  padding-top: 0em;
+  word-spacing: 10px;
 }
 
 .topnav-a a, .home {
   text-align: left;
   color: white;
   text-decoration: none;
+  font-size: 1em;
 }
 
 .right{
-  text-align: right;
+  position: absolute;
+  right:0
 }
 
 .home:hover{
