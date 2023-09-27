@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title>Ergon Blog</title>
+  <link>https://ergon.moe/blog</link>
+  <atom:link href="https://ergon.moe/blog/rss.xml" rel="self" type="application/rss+xml" />
+  <image>
+    <url>https://ergon.moe/images/icon_200x200.png</url>
+    <link>https://ergon.moe/blog</link>
+    <title>Ergon Blog</title>
+  </image>
+  <description>P2P stable electronic cash</description>
+  {% for article in articles %}
+  <item>
+    <title>{{article.title}}</title>
+    <link>https://ergon.moe/blog/{{article.title_url}}_{{article.author}}_{{article.date}}.html</link>
+    <guid>https://ergon.moe/blog/{{article.title_url}}_{{article.author}}_{{article.date}}.html</guid>
+    <description>{{article.teaser}}</description>
+    <author>{{article.author}}</author>
+    <pubDate>{{article.pubdate}}</pubDate>
+  </item>
+  {% endfor %}
+ </channel>
+</rss> 

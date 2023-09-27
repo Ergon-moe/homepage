@@ -1,0 +1,78 @@
+{% extends '_base.html'%}
+{% block title %}
+Ergon Blog
+{% endblock %}
+{% block staticfiles %}
+  <link href="../css/normalize.css" rel="stylesheet"/>
+  <link href="../css/skeleton.css" rel="stylesheet"/>
+  <link href="../css/main.css" rel="stylesheet"/>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="../images/icon.png" rel="icon" type="image/png"/>
+  <style>
+  .card-deck {
+      display:flex;
+      flex-wrap:wrap;
+      align-items:stretch;
+      justify-content:space-evenly;
+      row-gap:20px;
+  }
+  </style>
+
+  <meta property='og:title' content='Ergon Blog'>
+  <meta property='og:type' content='website'>
+  <meta property='og:image' content='https://ergon.moe/images/icon_200x200.png'>
+  <meta property='og:url' content='https://ergon.moe/blog/'>
+  <script src="../main.js" type="text/javascript">
+  {% endblock %}
+{% block navigation %}
+{% set nav = [{'href': 'href="../blog/index.html"', 'caption': "Blog"}, {'href':'href="../index.html"', 'caption': "Ergon"}] %}
+{% include '_header.html' %}
+{% endblock %}
+
+{% block content %}
+  <div class="section hero">
+   <div class="container">
+    <div class="row">
+     <div class="twelve column hero-title" style="margin-top: 10%">
+      <div class="twelve columns">
+      <h1 style="margin-bottom: 0.5em;">
+       Ergon Blog       
+      </h1>
+      <p class="description">
+        This is the space to learn cool things related to Ergon.
+        <a href="https://ergon.moe/blog/rss.xml">
+          <img src="https://ergon.moe/images/pic_rss.gif" width="36" height="14">
+        </a>
+      </p>
+      <p>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ 
+
+<div class="section">
+<div class="container">
+
+<div class='card-deck'>
+{% for article in articles %}
+<a href="{{article.title}}_{{article.author}}_{{article.date}}.html">
+ <div class='card' style='max-width:300px'>
+  <div class="container" style='padding-top:20px;padding-bottom:20px;'>
+   <h4>{{article.title}}</h4>
+   <img src="../images/{{article.title}}.jpg" alt="{{article.title}} image" style='max-width:100%'><br>     
+   <div style='color:dimgray'>{{article.author}}, {{article.date}}</div>
+   <hr>
+  <div>{{article.teaser}}</div>
+ </div>
+ </div>
+</a>
+{% endfor%}
+</div>
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,2 +1,4 @@
 User-agent: *
 Allow: *
+Sitemap: https://ergon.moe/sitemap.xml
+Sitemap: https://ergon.moe/blog/rss.xml

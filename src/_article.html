@@ -1,0 +1,74 @@
+{% extends '_base.html' %}
+{% block staticfiles %}
+  <link href="../css/normalize.css" rel="stylesheet"/>
+  <link href="../css/skeleton.css" rel="stylesheet"/>
+  <link href="../css/main.css" rel="stylesheet"/>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="../images/icon.png" rel="icon" type="image/png"/>
+  <meta property='og:title' content='{{title}}'>
+  <meta property='og:type' content='article'>
+  <meta property='og:image' content='https://ergon.moe/images/{{title}}.jpg'>
+  <meta property='og:url' content='https://ergon.moe/blog/{{title}}_{{author}}_{{date}}.html'>
+  <script src="../main.js" type="text/javascript">
+{% endblock %}
+{% block navigation %}
+{% set nav = [{'href': 'href="../blog/index.html"', 'caption': "Blog"}, {'href':'href="../index.html"', 'caption': "Ergon"}] %}
+{% include '_header.html' %}
+{% endblock %}
+{% block content %}
+  <div class="section hero">
+   <div class="container">
+    <div class="row">
+     <div class="twelve column hero-title" style="margin-top: 10%">
+      <h1> {{title}}</h1>
+        <img src="../images/{{title}}.jpg" style="max-width:100%">
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="section">
+   <div class="container">
+    <div class="row">
+     <div style='color:dimgray'>{{author}}, {{date}}</div> <br>
+     {{post_content_html}}
+    </div>
+   </div>
+  </div>
+  {#
+  <div class="section">
+   <div class="container">
+    <div class="row" id='disqus_thread'>
+    </div>
+    <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+    var disqus_config = function () {
+      this.page.identifier = "{{title}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ergon-moe.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//ergon-moe.disqus.com/count.js" async></script>
+   </div>
+  </div>
+  #}
+  <div class="section hero">
+   <div class="container">
+    <div class="row">
+
+  <script src="https://nocomment.fiatjaf.com/embed.js" id="nocomment"></script>
+    </div>
+   </div>
+  </div>
+
+{% endblock %}
