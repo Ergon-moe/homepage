@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ <head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"/>
+  <meta content="no-cache" http-equiv="Cache-control"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8"/>
+  <title>
+  
+   Ergon - Stable p2p Electronic Cash
+  
+  </title>
+  <meta content="Ergon (XRG) is a Bitcoin-like cryptocurrency with proportional block reward that aims to become the currency for the world" name="description"/>
+  <meta content="Licho" name="author"/>
+  <meta content="cryptocurrency, currency, bitcoin, stable, ergon, xrg, p2p, cash, payment, volatility" name="keywords"/>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <link href="../css/normalize.css" rel="stylesheet"/>
+  <link href="../css/skeleton.css" rel="stylesheet"/>
+  <link href="../css/main.css" rel="stylesheet"/>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="../images/icon.png" rel="icon" type="image/png"/>
+  <meta property='og:title' content='What Are The Miners Working On, Actually'>
+  <meta property='og:type' content='article'>
+  <meta property='og:image' content='https://ergon.moe/images/What Are The Miners Working On, Actually.jpg'>
+  <meta property='og:url' content='https://ergon.moe/blog/What Are The Miners Working On, Actually_Licho_2023-10-02.html'>
+  <script src="../main.js" type="text/javascript">
+
+  </script>
+ </head>
+ <body id="body">
+ 
+
+
+  <header id="topnav">
+   <div class="erasable-header">
+    <div class="container">
+     <div class="row">
+      <div class="one column">
+       <a class="home" href="https://ergon.moe/index.html"> Ergon </a>
+      </div>
+      <div class="six columns topnav-a right">
+      
+       <a href="../blog/index.html">Blog</a>
+      
+       <a href="../index.html">Ergon</a>
+      
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="bg-cover">
+   </div>
+   <a class="hamburger-shell">
+    <div class="hamb top">
+    </div>
+    <div class="hamb middle">
+    </div>
+    <div class="menu-name">MENU</div>
+   </a>
+   <ul id="menu">
+    <a class="hamburger-shell"></a>
+    <a href="https://ergon.moe/index.html"><li>Home</li></a>
+    
+    <a href="../blog/index.html"><li>Blog</li></a>
+    
+    <a href="../index.html"><li>Ergon</li></a>
+    
+   </ul>
+  </header>
+
+
+
+ 
+  <div class="section hero">
+   <div class="container">
+    <div class="row">
+     <div class="twelve column hero-title" style="margin-top: 10%">
+      <h1> What Are The Miners Working On, Actually</h1>
+        <img src="../images/What Are The Miners Working On, Actually.jpg" style="max-width:100%">
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="section">
+   <div class="container">
+    <div class="row">
+     <div style='color:dimgray'>Licho, 2023-10-02</div> <br>
+     <p>In my previous writing, I often argue that the unit of Ergon represents work. That the miners are rewarded proportionally to the work they do. This work seems to be so essential, it raises the question: What do they actually do that other people need? How is that a contribution to society?</p>
+<p>There is a common <strong>misconception</strong> that <strong>Proof Of Work (POW) is wasteful</strong>. It appears in public comments, in press and on TV. It only shows that it's not clear what are the miners actually burning their electricity for. It seems pointless, the common explanation is that they are solving some hard mathematical puzzles, playing a lottery.</p>
+<h3>Hashing</h3>
+<p>Let us start from the beginning. There is a mathematical operation, a so-called <strong>one way function</strong>. It is like a set of dice, that when thrown at a specific angle and speed will draw a certain result. It is just mathematics, so throwing the dice at the same angle and speed twice will yield the same result. What is important: knowing the result, you can't find out what were the initial conditions, you can't learn the angle and speed. Now if you put a username as the angle (a→1, b→2, c→3) and a password as the speed of the dice and throw them, the resulting dice numbers are the <strong>hash</strong> of user data. By the way, this is indeed how they securely store credentials in web services. They don't throw dice though, there are cryptographic functions that do it. When you log in, they will just hash what you've sent and compare the results, never revealing the password.</p>
+<p>For example:
+<code>user: abba (=1221)</code></p>
+<p><code>password: 123</code></p>
+<p><code>throwing angle: 12,21°</code></p>
+<p><code>throwing speed: 1.23m/s</code></p>
+<p>hash: &#9861;, &#9859;, &#9857;, &#9859;.</p>
+<h3>Ok, so what do the miners do, actually?</h3>
+<p>A hash is a <strong>mathematically objective truth</strong>. Miners are manufacturing the mathematically objective truth, and they <strong>carry over the truth onto the record of history</strong> by putting the history and the timestamp as parameters of the one way function and hash it.</p>
+<h3>How much of the truth is needed?</h3>
+<p>This kind of truth is easy to counterfeit, change the history record and hash it. How do we tell which record is real? Therefore, we need a stronger truth.</p>
+<p>You can request the truth to be special, like you'd wish a dice throw that would yield one die to draw a "&#x2680;". This is special a special result, it requires modifying the parameters a bit, maybe adding some numbers after the coma, so we don't ruin the message.</p>
+<p>For example:
+<code>user: abba (=1221)</code></p>
+<p><code>password: 123</code></p>
+<p><code>throwing angle: 12,211234123°</code></p>
+<p><code>throwing speed: 1.2333457456742m/s</code></p>
+<p>hash: &#9856;, &#9859;, &#9857;, &#9859;.</p>
+<p>This is a special hash, It's harder to find one like this, it requires much more throwing attempts with different tails. We can say this <strong>truth is stronger</strong>. Harder to counterfeit. It's hardly a lottery. The search is a bit random, that's why they are called miners, they are searching the available space, but mining is not just gambling on a lottery. They are searching for an objective, mathematical truth, strong enough to confirm the history.</p>
+<p>If at least half of the all miners' work is dedicated to confirming the reality, the honest ones ought to produce a stronger cumulative truth than the fakers. This is the essence of Proof Of Work. The work that miners are doing is not wasted, they are manufacturing the truth to carry it over on the history record.</p>
+<h3>How do you measure the strength of the truth</h3>
+<p>We measure the strength of the truth by the average number of attempts required to find it. If you wish two of the dices to draw a "&#x2680;", it will be of higher difficulty than drawing one. Naturally, if one does some number of attempts per second, twice as high difficulty will result as twice as high solving time. The strength required by the network is adjusted for the healthy communication - so that the blocks of the records were roughly evenly space with enough time in between them for everyone to communicate.</p>
+<h3>Simplified payment verification</h3>
+<p>Because one can judge the strength of the truth independently, and can cryptographically prove that his transaction is the part of the history without knowing the entirety of it, Simplified Payment Verification (SPV) is possible. Essentially, one only needs the header of a block and a small chunk of data to be confident their transaction was confirmed. Faking the SPV is exactly as difficult as faking the entire history. It is possible because of how objective the mathematical truth manufactured by the miners is.</p>
+<h3>Other consensus algorithms</h3>
+<p><strong>Proof of Stake (POS)</strong>, usually presented as an alternative to POW, is not concerned with the objective mathematical truth. It is a mechanism for <strong>deciding who's got the right to confirm</strong> the chunk of history this time. <strong>It's a very different question.</strong>  </p>
+<p>And indeed the <strong>results are different</strong>, for instance to join a POS consensus you need to first be enrolled to the system by the present already - by having the transaction sending you enough coins confirmed by them, so you can put the coins at stake (if you cheat you lose the stake). <strong>The freedom to join the consensus</strong> is closely tied to the cryptocurrency <strong>supply distribution</strong> - a new participant has to buy the coins from <em>someone</em> to be allowed to join.</p>
+<p>Light SPV wallets are <strong>not possible</strong>, to have any certainty about the consensus you need to <strong>verify all the transfers</strong>. You have to know who is allowed to confirm reality. In most cases, the light wallets simply <a href="https://nimbus.guide/trusted-node-sync.html">trust a third party</a>.</p>
+<p>I don't want to evaluate the pros and cons or assess any attack vectors here, just acknowledging that there is a <strong>qualitative difference</strong> between the consensus algorithms. They answer a different question, solve a different problem.</p>
+<h3>Summary</h3>
+<p>The miners are not wasting electricity. They are manufacturing something of value - the objective truth. This truth carries over its weight onto the record of history. It's powered by electricity, which in principle can be renewable, electrification of transport happens for this reason. Additionally, at this point, it is completely unstoppable. There is no headquarters. It's like digging sand. It can be made illegal, but you get a shovel, and you dig sand in your backyard. Similarly doing proofs of work, although in most cases you'd need more like a small excavator.</p>
+    </div>
+   </div>
+  </div>
+  
+  <div class="section hero">
+   <div class="container">
+    <div class="row">
+
+  <script src="https://nocomment.fiatjaf.com/embed.js" id="nocomment"></script>
+    </div>
+   </div>
+  </div>
+
+
+ 
+  <footer>
+   <div class="container">
+    <div class="row" id="donate">
+     <p>
+      <h5>
+       Ergon development is community funded. Donate to support this project:
+      </h5>
+      <br/>
+      <b>
+       OpenAlias (for XRG, BCH, XMR, BTC): donate@ergon.moe
+      </b>
+      <br/>
+      <b>
+       <a href="ergon:qz449vfh5fjk5sv36jq4z9n9d6xuag4l0utau0kz6z">
+        ergon:qz449vfh5fjk5sv36jq4z9n9d6xuag4l0utau0kz6z
+        <a>
+        </a>
+       </a>
+      </b>
+      <br/>
+      <b>
+       <a href="bitcoincash:qr6alaul372f6lq7sj2svdlpxdthvdlgwcxnqys8xr">
+        bitcoincash:qr6alaul372f6lq7sj2svdlpxdthvdlgwcxnqys8xr
+       </a>
+      </b>
+      <br/>
+      <par style="overflow-wrap: break-word">
+       XMR:
+       <b>
+        88ySe8XvLsx1x7kC6Qv1a8498iSxmudCZSuyDbPUpjAshbB5CGmNz2AhSnvGiBUyWDUbkGWFRbmWqc1MKLfGoyAdGxxMr7V
+       </b>
+      </par>
+      <br/>
+      ETH/ERC20:
+      <b>
+       0x3B6C45c656d59C36B943c4AFD95a0a42153307C8
+      </b>
+      <br/>
+      DOGE:
+      <b>
+       DUNh7P3divupqhPxrYG7xsBnEiCFAvZYxf
+      </b>
+      <br/>
+      BTC:
+      <b>
+       bc1qquzawfknxpf4lu22vwznakwpgn7xpqr7lucnpx
+      </b>
+     </p>
+    </div>
+    <div class="row">
+     <h6 style="font-size: 1.75rem">
+      <a href="https://github.com/Ergon-moe/Bitcoin-Static">
+       Explore Source Code
+      </a>
+      |
+      <a href="http://www.reddit.com/r/ergon">
+       Ergon Forum
+      </a>
+     </h6>
+    </div>
+    <div class="row">
+     <h6 style="font-size: 1.75rem">
+      <a href="https://explorer.ergon.network">
+       Block Explorer
+      </a>
+     </h6>
+    </div>
+    <div class="row">
+     <h6>
+      © Ergon.moe
+     </h6>
+    </div>
+   </div>
+  </footer>
+ 
+ 
+ </body>
+</html>

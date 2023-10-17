@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ <head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"/>
+  <meta content="no-cache" http-equiv="Cache-control"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8"/>
+  <title>
+  
+   Ergon - Stable p2p Electronic Cash
+  
+  </title>
+  <meta content="Ergon (XRG) is a Bitcoin-like cryptocurrency with proportional block reward that aims to become the currency for the world" name="description"/>
+  <meta content="Licho" name="author"/>
+  <meta content="cryptocurrency, currency, bitcoin, stable, ergon, xrg, p2p, cash, payment, volatility" name="keywords"/>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <link href="../css/normalize.css" rel="stylesheet"/>
+  <link href="../css/skeleton.css" rel="stylesheet"/>
+  <link href="../css/main.css" rel="stylesheet"/>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="../images/icon.png" rel="icon" type="image/png"/>
+  <meta property='og:title' content='How to Start An Online Store With Bitcart'>
+  <meta property='og:type' content='article'>
+  <meta property='og:image' content='https://ergon.moe/images/How to Start An Online Store With Bitcart.jpg'>
+  <meta property='og:url' content='https://ergon.moe/blog/How to Start An Online Store With Bitcart_Licho_2023-10-09.html'>
+  <script src="../main.js" type="text/javascript">
+
+  </script>
+ </head>
+ <body id="body">
+ 
+
+
+  <header id="topnav">
+   <div class="erasable-header">
+    <div class="container">
+     <div class="row">
+      <div class="one column">
+       <a class="home" href="https://ergon.moe/index.html"> Ergon </a>
+      </div>
+      <div class="six columns topnav-a right">
+      
+       <a href="../blog/index.html">Blog</a>
+      
+       <a href="../index.html">Ergon</a>
+      
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="bg-cover">
+   </div>
+   <a class="hamburger-shell">
+    <div class="hamb top">
+    </div>
+    <div class="hamb middle">
+    </div>
+    <div class="menu-name">MENU</div>
+   </a>
+   <ul id="menu">
+    <a class="hamburger-shell"></a>
+    <a href="https://ergon.moe/index.html"><li>Home</li></a>
+    
+    <a href="../blog/index.html"><li>Blog</li></a>
+    
+    <a href="../index.html"><li>Ergon</li></a>
+    
+   </ul>
+  </header>
+
+
+
+ 
+  <div class="section hero">
+   <div class="container">
+    <div class="row">
+     <div class="twelve column hero-title" style="margin-top: 10%">
+      <h1> How to Start An Online Store With Bitcart</h1>
+        <img src="../images/How to Start An Online Store With Bitcart.jpg" style="max-width:100%">
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="section">
+   <div class="container">
+    <div class="row">
+     <div style='color:dimgray'>Licho, 2023-10-09</div> <br>
+     <p>Ergon is not featured in any <em>mainstream</em> payment processor, so you might be wondering "How do I start an online business with it?".</p>
+<p>Fortunately there is something much better. Ergon is implemented in <a href="https://bitcart.ai">Bitcart</a>. <strong>Bitcart is an underrated, brilliant payment processor</strong> that can be used as a stand-alone store or be integrated with shoppify and many ther popular e-commerce solutions. It can also serve as an SDK for things like <a href="https://t.me/gonia_tipping_bot">tipping bots</a> or any other python, transaction processing apps.</p>
+<p>Bitcart can be <strong>self-hosted</strong> or <strong>third party hosted</strong>. You can safely use a hosted option, because it doesn't have to control your private key, it only needs the wallet's Master Public Key (xpub) to operate. From the xpub, it generates unused addresses and all of the store payments go directly into a wallet, that only you control.</p>
+<h3>How to use hosted Bitcart with Shoppify</h3>
+<p>I run a bitcart instance on ergon.network for the community to use. Let's walk through the process of setting up.</p>
+<h4>Setting up Oregano</h4>
+<p>First If you already use it, have a wallet, you can skip to the point 3</p>
+<ol>
+<li>Install <a href="https://ergon.moe/#download">Oregano Wallet</a> for your platform.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li>Open Oregano, you will be met with a creation wizard. Pick a name for your wallet and follow the steps in the wizard, write down the 12 words to be able to recover the wallet in case anything happens to it.</li>
+<li>After you're done, in the main window, navigate to Wallet&gt;Information or click ctrl+i. You will see the Master Public Key. It is used to generate addresses of your wallet. Leave this window open to later copy the key.
+<img src="../images/oregano_bitcart.jpg" style="width:100%"></li>
+</ol>
+<h4>Setting up Bitcart</h4>
+<p>Wallet:</p>
+<ol>
+<li>
+<p>Visit the ergon.network's bitcart <a href="https://bitcart-admin.ergon.network/register">admin panel</a> and fill the credentials. Hit the Create Account button.
+<img src="../images/bitcart_1.jpg" style="width:100%"></p>
+</li>
+<li>
+<p>Click "Detail" on the "Wallets" card.</p>
+</li>
+<li>Click "New Wallet".</li>
+<li>Name the wallet, in the currency field pick xrg. Copy the Xpub from Oregano. You can also add a label that will appear during the payment as "Pay with: yourlabel".</li>
+<li>Save.</li>
+</ol>
+<p>Store:</p>
+<ol>
+<li>Navigate back to the dashboard.</li>
+<li>Click "Details" on the "Stores" card.</li>
+<li>Click "New Store" button.</li>
+<li>Name your store, write XRG in the "Default currency" entry, pick the wallet.</li>
+<li>Save.
+<img src="../images/bitcart_2.jpg" style="width:100%"></li>
+</ol>
+<h4>Setting up Shoppify</h4>
+<p>Now, I could be writing my own, but to be frank, Bitcart's guide on this is already great and it has a video showing how to do it.</p>
+<ol>
+<li>From now on, <a href="https://docs.bitcart.ai/integrations/shopify">Follow this guide</a>. Use https://bitcart-api.ergon.network as the api link and https://bitcart-admin.ergon.network in the tutorial.</li>
+</ol>
+<h4>After completing</h4>
+<p>After completing this tutorial you have an online store without any bank account or the need for permission from any third party. You can announce it to the passionate Ergon community that will instantly become your customers.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Some antiviruses flagged Oregano as adware and block it, possibly because it has tor built in. You can <a href="https://opentip.kaspersky.com/0A94790758459F615879D5EAF568BC59B3F85AC9D45CE59D24D8D7166D7FD6C9/results?tab=upload">scan the binary</a> yourself on the Kaspersky website and verify if it is still flagged. Oregano contains no ads, I encourage you to complain directly to the antivirus software, I've been told by other crypto software developers it helps in removing the false flagging.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+    </div>
+   </div>
+  </div>
+  
+  <div class="section hero">
+   <div class="container">
+    <div class="row">
+
+  <script src="https://nocomment.fiatjaf.com/embed.js" id="nocomment"></script>
+    </div>
+   </div>
+  </div>
+
+
+ 
+  <footer>
+   <div class="container">
+    <div class="row" id="donate">
+     <p>
+      <h5>
+       Ergon development is community funded. Donate to support this project:
+      </h5>
+      <br/>
+      <b>
+       OpenAlias (for XRG, BCH, XMR, BTC): donate@ergon.moe
+      </b>
+      <br/>
+      <b>
+       <a href="ergon:qz449vfh5fjk5sv36jq4z9n9d6xuag4l0utau0kz6z">
+        ergon:qz449vfh5fjk5sv36jq4z9n9d6xuag4l0utau0kz6z
+        <a>
+        </a>
+       </a>
+      </b>
+      <br/>
+      <b>
+       <a href="bitcoincash:qr6alaul372f6lq7sj2svdlpxdthvdlgwcxnqys8xr">
+        bitcoincash:qr6alaul372f6lq7sj2svdlpxdthvdlgwcxnqys8xr
+       </a>
+      </b>
+      <br/>
+      <par style="overflow-wrap: break-word">
+       XMR:
+       <b>
+        88ySe8XvLsx1x7kC6Qv1a8498iSxmudCZSuyDbPUpjAshbB5CGmNz2AhSnvGiBUyWDUbkGWFRbmWqc1MKLfGoyAdGxxMr7V
+       </b>
+      </par>
+      <br/>
+      ETH/ERC20:
+      <b>
+       0x3B6C45c656d59C36B943c4AFD95a0a42153307C8
+      </b>
+      <br/>
+      DOGE:
+      <b>
+       DUNh7P3divupqhPxrYG7xsBnEiCFAvZYxf
+      </b>
+      <br/>
+      BTC:
+      <b>
+       bc1qquzawfknxpf4lu22vwznakwpgn7xpqr7lucnpx
+      </b>
+     </p>
+    </div>
+    <div class="row">
+     <h6 style="font-size: 1.75rem">
+      <a href="https://github.com/Ergon-moe/Bitcoin-Static">
+       Explore Source Code
+      </a>
+      |
+      <a href="http://www.reddit.com/r/ergon">
+       Ergon Forum
+      </a>
+     </h6>
+    </div>
+    <div class="row">
+     <h6 style="font-size: 1.75rem">
+      <a href="https://explorer.ergon.network">
+       Block Explorer
+      </a>
+     </h6>
+    </div>
+    <div class="row">
+     <h6>
+      © Ergon.moe
+     </h6>
+    </div>
+   </div>
+  </footer>
+ 
+ 
+ </body>
+</html>
