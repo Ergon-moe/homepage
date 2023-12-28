@@ -5,8 +5,11 @@
       <div class="one column">
        <a class="home" href="https://ergon.moe/index.html"> Ergon </a>
       </div>
-      <div class="six columns topnav-a right">
+      <div class="seven columns topnav-a right">
       {% for item in nav %}
+       <a {{item.href}}>{{item.caption}}</a>
+      {% endfor %}
+      {% for item in langs %}
        <a {{item.href}}>{{item.caption}}</a>
       {% endfor %}
       </div>
@@ -28,6 +31,9 @@
     {% for item in nav2 %}
     <a {{item.href}}><li>{{item.caption}}</li></a>
     {% endfor %}
+    <li>{% for item in langs %}
+    <a {{item.href}}>{{item.caption }}</a> 
+    {% endfor %}</li>
    </ul>
   </header>
 

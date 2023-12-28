@@ -106,10 +106,9 @@ button{
 .hamburger-shell {
   margin: 0;
   position: fixed;
-  overflow: hidden;
+  overflow: scroll;
   width: 70px;
   height: 100px;
-  overflow: auto;
   left: calc(100% - 60px);
   opacity: 0;
   z-index: 102;

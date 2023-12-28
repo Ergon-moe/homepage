@@ -3,11 +3,9 @@
     <div class="container">
      <div class="row">
       <div class="one column">
-       <a class="home" href="https://ergon.moe/index.html"> 
-ארגון
-</a>
+       <a class="home" href="https://ergon.moe/index.html"> Ergon </a>
       </div>
-      <div class="eight columns topnav-a right">
+      <div class="six columns topnav-a right">
       {% for item in nav %}
        <a {{item.href}}>{{item.caption}}</a>
       {% endfor %}
@@ -22,11 +20,10 @@
     </div>
     <div class="hamb middle">
     </div>
-    <div class="menu-name">תַפרִיט</div>
    </a>
    <ul id="menu">
     <a class="hamburger-shell"></a>
-    <a href="https://ergon.moe/index.html"><li>דף הבית</li></a>
+    <a href="https://ergon.moe/index.html"><li>Home</li></a>
     {% for item in nav2 %}
     <a {{item.href}}><li>{{item.caption}}</li></a>
     {% endfor %}

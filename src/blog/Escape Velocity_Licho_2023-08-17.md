@@ -1,3 +1,4 @@
+*Update (2023-11-21):* The article contained an error in the calculation of particular escape velocities. It has been corrected and expanded to show where the numbers came from.
 
 The common theme of the cryptocurrency space is **the hard supply cap**. Cryprocurrencies and tokens often have a fixed number of units to ever come to existence. By the simple reasoning, if there is a fixed number of units then it must be scarce, therefore valuable, right? Is 21 million units of Bitcoin a lot? People often say things like **"There are 8 billion people in the world, so it's not enough for everyone to have 1 Bitcoin"** silently assuming the big win scenario - everyone will want it. In the space of thousands of cryptocurrencies that we have today, any of them still follows this logic and proclaims itself the future "winner". In fact,  cryptocurrencies rely on this logic with their survival, implementing diminishing reward that will eventually disappear.
 
@@ -22,17 +23,45 @@ To actually depict how restricted it is, we need to revert to the notions famili
 
 If the technological progress would suddenly stop and Ergon would forever have the hashrate it has at the halt point, the Moore's law correction would make it just a regular cryptocurrency with a hard cap. Now, using this ultimate hashrate as a parameter, we can get a picture of how restrictive the supply it. The formula is `current supply +factor x hashrate`.
 
-Let's see some numbers (as of 2023-08-17). `Current supply` is about 4 and the `factor` is around 0.03 per Ths
+Let's see some numbers (as of 2023-11-21). `Current supply` is about 33ⵟ and the `factor` is around 0.0384  $`\frac{ⵟ}{Thps}`$. To see the derivation details, check out the [next paragraph](#derivation).
 
 |hashrate|supply cap|
 |--------|----------|
-|100Ths  |7XRG      |
-|1Phs    |34XRG     |
-|4Ehs    |120 kXRG  |
-|400Ehs  |12 MXRG   |
+|100Ths  |37ⵟ      |
+|1Phs    |71ⵟ     |
+|4Ehs    |153.5 kⵟ  |
+|400Ehs  |15.3 Mⵟ   |
 
-Which means that if the entire hashrate in existence right now for whatever reason switched to mine Ergon, and no hashrate was ever added or removed, the supply cap would still be around 12 million XRG.
+Which means that if the entire hashrate in existence right now for whatever reason switched to mine Ergon, and no hashrate was ever added or removed, the supply cap would still be around 15 million Ergons.
 
 I hope that illustrates how scarce Ergon really is.
 
+
+<h3 id='derivation'>Derivation </h3>
+
+This is a bonus paragraph for the people who'd want to see where it comes from.
+We sum up all of the diminishing rewards.
+
+The reward rate $`R = e^{-\ln2 \frac{t-t_0}{\tau}}\times 365 r \times H`$, where $`r`$ is the daily reward (you can take the current one from [Ergon Network Pool](https://pool.ergon.network), it's the last number), $`\tau = 2.3y`$ is the halving time and $`H`$ is hashrate. 365 appears because $`r`$ is in the unit of $`\frac{ⵟ}{Thps\times\text{day}}`$ while the halving time is in years.
+
+To sum the rewards together, we integrate the equation from now to infinity.
+
+```math
+T=\int_{t_0}^{\infty}e^{-\ln2 \frac{t-t_0}{\tau}}\times  365 r  \times H dt
+```
+Where $`T`$ is `total`, 
+
+The result of the integration to infinity is:
+
+`total` = `current supply` + (`halving time`/ln2) * 365 * `daily reward` * `hashrate`
+
+We will call the factor in front of `hashrate` the `factor`.
+
+`halving time` = 2.3y,
+
+`daily reward` (as of 2023-11-21)= 0.00003168$`\frac{ⵟ}{Thps\times\text{day}}`$,
+
+`ln2` = 0.693,
+
+The `factor` is equal to 0.0384 $`\frac{ⵟ}{Thps}`$.
 

@@ -1,6 +1,7 @@
 #! /bin/python
 import os
 import re
+import json
 from pathlib import Path
 from datetime import date, datetime
 
@@ -8,6 +9,24 @@ from io import StringIO
 import markdown
 from staticjinja import Site
 from email import utils
+from subprocess import check_output, STDOUT
+
+langs = ['en', 'pl', 'he', 'ar']
+def check_translations():
+    keys = check_output('sed -n  "s/.*{{_\\[\\"\\(.*\\)\\"\\]}}.*/\\1/p" src/_index_content.html', text=True, shell=True, stderr=STDOUT)
+    for lang in langs:
+        with open(f'src/{lang}/index.html') as f:
+            content = f.read()
+            translation = content.split('{% set _= ')[1].split('%}')[0]
+            lang_dict = json.loads(translation) 
+            lang_keys = set(lang_dict.keys())
+            source_keys = set([w.strip() for w in keys.split('\n')])
+            print('Missing in _index_content:')
+            print(lang_keys.difference(source_keys))
+            print(f'Missing in {lang}')
+            print(source_keys.difference(lang_keys))
+
+        
 
 def unmark_element(element, stream=None):
     if stream is None:
@@ -21,7 +40,7 @@ def unmark_element(element, stream=None):
     return stream.getvalue()
 
 markdown.Markdown.output_formats["plain"] = unmark_element
-markdowner = markdown.Markdown(output_format="html5", extensions=['tables', 'footnotes'])
+markdowner = markdown.Markdown(output_format="html5", extensions=['tables', 'footnotes', 'markdown_katex'])
 plainer = markdown.Markdown(output_format="plain", extensions=['tables', 'footnotes'])
 plainer.stripTopLevelTags = False
 
@@ -98,3 +117,4 @@ if __name__ == "__main__":
     )
     # enable automatic reloading
     site.render()
+    check_translations()

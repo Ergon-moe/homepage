@@ -15,7 +15,9 @@
    Ergon - Stable p2p Electronic Cash
   
   </title>
+  
   <meta content="Ergon (XRG) is a Bitcoin-like cryptocurrency with proportional block reward that aims to become the currency for the world" name="description"/>
+  
   <meta content="Licho" name="author"/>
   <meta content="cryptocurrency, currency, bitcoin, stable, ergon, xrg, p2p, cash, payment, volatility" name="keywords"/>
   <!-- Mobile Specific Metas
@@ -49,11 +51,12 @@
       <div class="one column">
        <a class="home" href="https://ergon.moe/index.html"> Ergon </a>
       </div>
-      <div class="six columns topnav-a right">
+      <div class="seven columns topnav-a right">
       
        <a href="../blog/index.html">Blog</a>
       
        <a href="../index.html">Ergon</a>
+      
       
       </div>
      </div>
@@ -76,6 +79,7 @@
     
     <a href="../index.html"><li>Ergon</li></a>
     
+    <li></li>
    </ul>
   </header>
 
@@ -97,7 +101,8 @@
    <div class="container">
     <div class="row">
      <div style='color:dimgray'>Licho, 2023-08-17</div> <br>
-     <p>The common theme of the cryptocurrency space is <strong>the hard supply cap</strong>. Cryprocurrencies and tokens often have a fixed number of units to ever come to existence. By the simple reasoning, if there is a fixed number of units then it must be scarce, therefore valuable, right? Is 21 million units of Bitcoin a lot? People often say things like <strong>"There are 8 billion people in the world, so it's not enough for everyone to have 1 Bitcoin"</strong> silently assuming the big win scenario - everyone will want it. In the space of thousands of cryptocurrencies that we have today, any of them still follows this logic and proclaims itself the future "winner". In fact,  cryptocurrencies rely on this logic with their survival, implementing diminishing reward that will eventually disappear.</p>
+     <p><em>Update (2023-11-21):</em> The article contained an error in the calculation of particular escape velocities. It has been corrected and expanded to show where the numbers came from.</p>
+<p>The common theme of the cryptocurrency space is <strong>the hard supply cap</strong>. Cryprocurrencies and tokens often have a fixed number of units to ever come to existence. By the simple reasoning, if there is a fixed number of units then it must be scarce, therefore valuable, right? Is 21 million units of Bitcoin a lot? People often say things like <strong>"There are 8 billion people in the world, so it's not enough for everyone to have 1 Bitcoin"</strong> silently assuming the big win scenario - everyone will want it. In the space of thousands of cryptocurrencies that we have today, any of them still follows this logic and proclaims itself the future "winner". In fact,  cryptocurrencies rely on this logic with their survival, implementing diminishing reward that will eventually disappear.</p>
 <h2>How much is much?</h2>
 <p>This question doesn't make sense without a context. Value is an equilibrium between two factors - both supply and demand. We compare the amount to the size of the market for it. 100 apartamnt buildings is a very different number in a small town than it is in a metropoly.</p>
 <h2>The invisible hand of the market</h2>
@@ -109,7 +114,7 @@
 <h2>Escape Velocity</h2>
 <p>To actually depict how restricted it is, we need to revert to the notions familiar to the person coming from cryptocurrency background, also easily understandable to a no-coiner. Escape velocity is the speed an object has to get to go into an orbit or beyond it. Similarly, we will use this for a sort of supply cap.</p>
 <p>If the technological progress would suddenly stop and Ergon would forever have the hashrate it has at the halt point, the Moore's law correction would make it just a regular cryptocurrency with a hard cap. Now, using this ultimate hashrate as a parameter, we can get a picture of how restrictive the supply it. The formula is <code>current supply +factor x hashrate</code>.</p>
-<p>Let's see some numbers (as of 2023-08-17). <code>Current supply</code> is about 4 and the <code>factor</code> is around 0.03 per Ths</p>
+<p>Let's see some numbers (as of 2023-11-21). <code>Current supply</code> is about 33ⵟ and the <code>factor</code> is around 0.0384  $<code>\frac{ⵟ}{Thps}</code>$. To see the derivation details, check out the <a href="#derivation">next paragraph</a>.</p>
 <table>
 <thead>
 <tr>
@@ -120,24 +125,40 @@
 <tbody>
 <tr>
 <td>100Ths</td>
-<td>7XRG</td>
+<td>37ⵟ</td>
 </tr>
 <tr>
 <td>1Phs</td>
-<td>34XRG</td>
+<td>71ⵟ</td>
 </tr>
 <tr>
 <td>4Ehs</td>
-<td>120 kXRG</td>
+<td>153.5 kⵟ</td>
 </tr>
 <tr>
 <td>400Ehs</td>
-<td>12 MXRG</td>
+<td>15.3 Mⵟ</td>
 </tr>
 </tbody>
 </table>
-<p>Which means that if the entire hashrate in existence right now for whatever reason switched to mine Ergon, and no hashrate was ever added or removed, the supply cap would still be around 12 million XRG.</p>
+<p>Which means that if the entire hashrate in existence right now for whatever reason switched to mine Ergon, and no hashrate was ever added or removed, the supply cap would still be around 15 million Ergons.</p>
 <p>I hope that illustrates how scarce Ergon really is.</p>
+<h3 id='derivation'>Derivation </h3>
+
+<p>This is a bonus paragraph for the people who'd want to see where it comes from.
+We sum up all of the diminishing rewards.</p>
+<p>The reward rate $<code>R = e^{-\ln2 \frac{t-t_0}{\tau}}\times 365 r \times H</code>$, where $<code>r</code>$ is the daily reward (you can take the current one from <a href="https://pool.ergon.network">Ergon Network Pool</a>, it's the last number), $<code>\tau = 2.3y</code>$ is the halving time and $<code>H</code>$ is hashrate. 365 appears because $<code>r</code>$ is in the unit of $<code>\frac{ⵟ}{Thps\times\text{day}}</code>$ while the halving time is in years.</p>
+<p>To sum the rewards together, we integrate the equation from now to infinity.</p>
+<p><code>math
+T=\int_{t_0}^{\infty}e^{-\ln2 \frac{t-t_0}{\tau}}\times  365 r  \times H dt</code>
+Where $<code>T</code>$ is <code>total</code>, </p>
+<p>The result of the integration to infinity is:</p>
+<p><code>total</code> = <code>current supply</code> + (<code>halving time</code>/ln2) * 365 * <code>daily reward</code> * <code>hashrate</code></p>
+<p>We will call the factor in front of <code>hashrate</code> the <code>factor</code>.</p>
+<p><code>halving time</code> = 2.3y,</p>
+<p><code>daily reward</code> (as of 2023-11-21)= 0.00003168$<code>\frac{ⵟ}{Thps\times\text{day}}</code>$,</p>
+<p><code>ln2</code> = 0.693,</p>
+<p>The <code>factor</code> is equal to 0.0384 $<code>\frac{ⵟ}{Thps}</code>$.</p>
     </div>
    </div>
   </div>
@@ -152,81 +173,6 @@
   </div>
 
 
- 
-  <footer>
-   <div class="container">
-    <div class="row" id="donate">
-     <p>
-      <h5>
-       Ergon development is community funded. Donate to support this project:
-      </h5>
-      <br/>
-      <b>
-       OpenAlias (for XRG, BCH, XMR, BTC): donate@ergon.moe
-      </b>
-      <br/>
-      <b>
-       <a href="ergon:qz449vfh5fjk5sv36jq4z9n9d6xuag4l0utau0kz6z">
-        ergon:qz449vfh5fjk5sv36jq4z9n9d6xuag4l0utau0kz6z
-        <a>
-        </a>
-       </a>
-      </b>
-      <br/>
-      <b>
-       <a href="bitcoincash:qr6alaul372f6lq7sj2svdlpxdthvdlgwcxnqys8xr">
-        bitcoincash:qr6alaul372f6lq7sj2svdlpxdthvdlgwcxnqys8xr
-       </a>
-      </b>
-      <br/>
-      <par style="overflow-wrap: break-word">
-       XMR:
-       <b>
-        88ySe8XvLsx1x7kC6Qv1a8498iSxmudCZSuyDbPUpjAshbB5CGmNz2AhSnvGiBUyWDUbkGWFRbmWqc1MKLfGoyAdGxxMr7V
-       </b>
-      </par>
-      <br/>
-      ETH/ERC20:
-      <b>
-       0x3B6C45c656d59C36B943c4AFD95a0a42153307C8
-      </b>
-      <br/>
-      DOGE:
-      <b>
-       DUNh7P3divupqhPxrYG7xsBnEiCFAvZYxf
-      </b>
-      <br/>
-      BTC:
-      <b>
-       bc1qquzawfknxpf4lu22vwznakwpgn7xpqr7lucnpx
-      </b>
-     </p>
-    </div>
-    <div class="row">
-     <h6 style="font-size: 1.75rem">
-      <a href="https://github.com/Ergon-moe/Bitcoin-Static">
-       Explore Source Code
-      </a>
-      |
-      <a href="http://www.reddit.com/r/ergon">
-       Ergon Forum
-      </a>
-     </h6>
-    </div>
-    <div class="row">
-     <h6 style="font-size: 1.75rem">
-      <a href="https://explorer.ergon.network">
-       Block Explorer
-      </a>
-     </h6>
-    </div>
-    <div class="row">
-     <h6>
-      © Ergon.moe
-     </h6>
-    </div>
-   </div>
-  </footer>
  
  
  </body>

@@ -41,7 +41,7 @@ Traditional banks have centrally regulated reserve requirements. They pay extra 
 
 Austrian economists argue, that this system causes the economic cycles, by distorting the interest rates with Cantillon effect. I recommend watching this debate, it is very insightful.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UDLCa7maGZA?si=5ds0RH98ju63sY7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe style="aspect-ratio: 16/9;width:100%;max-width:560px;margin:auto;" src="https://www.youtube.com/embed/UDLCa7maGZA?si=5ds0RH98ju63sY7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 As much as we'd want to believe it wasn't, **the fractional reserve system is bound to happen** on top of any cryptocurrency, because custodial services and wrapped tokens exist. At some point an exchange, a wrapped token system or a hosted wallet will start investing with the customer funds, recirculating them into the market, going fractional or lose them in a hack and not admit it. They can either stay quiet about it or be transparent and public, yet **some people won't mind**, attracted by interest offered. It will happen eventually. It might be sooner than we expect. FTX was doing this, other major exchanges are *probably* also doing it.
 
