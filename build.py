@@ -14,6 +14,8 @@ from subprocess import check_output, STDOUT
 langs = ['en', 'pl', 'he', 'ar']
 def check_translations():
     keys = check_output('sed -n  "s/.*{{_\\[\\"\\(.*\\)\\"\\]}}.*/\\1/p" src/_index_content.html', text=True, shell=True, stderr=STDOUT)
+    keys += check_output('sed -n  "s/.*{{_\\[\\"\\(.*\\)\\"\\]}}.*/\\1/p" src/_footer.html', text=True, shell=True, stderr=STDOUT)
+    print(keys)
     for lang in langs:
         with open(f'src/{lang}/index.html') as f:
             content = f.read()
@@ -40,7 +42,7 @@ def unmark_element(element, stream=None):
     return stream.getvalue()
 
 markdown.Markdown.output_formats["plain"] = unmark_element
-markdowner = markdown.Markdown(output_format="html5", extensions=['tables', 'footnotes', 'markdown_katex'])
+markdowner = markdown.Markdown(output_format="html5", extensions=['tables', 'footnotes'])#, 'markdown_katex'])
 plainer = markdown.Markdown(output_format="plain", extensions=['tables', 'footnotes'])
 plainer.stripTopLevelTags = False
 
