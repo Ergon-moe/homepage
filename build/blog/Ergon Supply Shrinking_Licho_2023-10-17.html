@@ -29,6 +29,7 @@
   <link href="../css/normalize.css" rel="stylesheet"/>
   <link href="../css/skeleton.css" rel="stylesheet"/>
   <link href="../css/main.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/styles.min.css">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="../images/icon.png" rel="icon" type="image/png"/>
@@ -53,9 +54,9 @@
       </div>
       <div class="seven columns topnav-a right">
       
-       <a href="../blog/index.html">Blog</a>
+       <a tabindex=0 href="../blog/index.html">Blog</a>
       
-       <a href="../index.html">Ergon</a>
+       <a tabindex=0 href="../index.html">Ergon</a>
       
       
       </div>
@@ -73,11 +74,11 @@
    </a>
    <ul id="menu">
     <a class="hamburger-shell"></a>
-    <a href="https://ergon.moe/index.html"><li>Home</li></a>
+    <li><a href="https://ergon.moe/index.html">Home</a></li>
     
-    <a href="../blog/index.html"><li>Blog</li></a>
+    <li><a href="../blog/index.html">Blog</a></li>
     
-    <a href="../index.html"><li>Ergon</li></a>
+    <li><a href="../index.html">Ergon</a></li>
     
     <li></li>
    </ul>
@@ -92,7 +93,7 @@
      <h4 class="hero-title">The winner of the community competition:</h4>
     </div>
     <div class"row " style="margin:auto;width:90%">
-        <p class="hero-title">Your ad here</p>
+        <p class="hero-title">Your ad here if you win</p>
     </div>
    </div>
   </div>
@@ -152,6 +153,37 @@
     </div>
    </div>
   </div>
+
+  <div class="section">
+   <div class="container">
+    <div class="row">
+     <form class="fsb-prompt">
+      <label>Share this page from your fediverse server</label>
+      <div class="fsb-input-group mb-3">
+       <span class="fsb-input-group-text">https://</span>
+        <input required
+         type="text"
+         name="fediverse-domain"
+         placeholder="mastodon.social"
+         class="fsb-input fsb-domain"
+         aria-label="Server domain">
+         <button class="fsb-button"
+          type="submit"><img src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/icons/mastodon.svg"
+          class="fsb-icon"></span>Share</button>
+      </div>
+      <p class="fsb-support-note fsb-d-none">This server does not support sharing. Please visit
+       <a
+       class="fsb-support-note-link"
+       target="_blank"
+       href=""></a>.
+      </p>
+     </form>
+    </div>
+   </div>
+  </div>
+  <script src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/script.min.js" defer class="fsb-script"></script>
+
+
   
   <div class="section hero">
    <div class="container">

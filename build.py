@@ -10,6 +10,7 @@ import markdown
 from staticjinja import Site
 from email import utils
 from subprocess import check_output, STDOUT
+from pprint import pprint
 
 langs = ['en', 'pl', 'he', 'ar']
 def check_translations():
@@ -24,9 +25,17 @@ def check_translations():
             lang_keys = set(lang_dict.keys())
             source_keys = set([w.strip() for w in keys.split('\n')])
             print('Missing in _index_content:')
+            inindex = lang_keys.difference(source_keys)
             print(lang_keys.difference(source_keys))
             print(f'Missing in {lang}')
-            print(source_keys.difference(lang_keys))
+            missing = source_keys.difference(lang_keys)
+            print(missing)
+            for m in missing:
+                lang_dict[m]=m
+            for m in inindex:
+                del lang_dict[m]
+            print(f"UNION {lang}")
+            print(json.dumps(lang_dict, indent=4,ensure_ascii=False))
 
         
 
@@ -42,7 +51,7 @@ def unmark_element(element, stream=None):
     return stream.getvalue()
 
 markdown.Markdown.output_formats["plain"] = unmark_element
-markdowner = markdown.Markdown(output_format="html5", extensions=['tables', 'footnotes'])#, 'markdown_katex'])
+markdowner = markdown.Markdown(output_format="html5", extensions=['tables', 'footnotes', 'markdown_katex'])
 plainer = markdown.Markdown(output_format="plain", extensions=['tables', 'footnotes'])
 plainer.stripTopLevelTags = False
 

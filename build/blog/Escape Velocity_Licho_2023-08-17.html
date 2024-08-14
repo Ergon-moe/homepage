@@ -29,6 +29,7 @@
   <link href="../css/normalize.css" rel="stylesheet"/>
   <link href="../css/skeleton.css" rel="stylesheet"/>
   <link href="../css/main.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/styles.min.css">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="../images/icon.png" rel="icon" type="image/png"/>
@@ -53,9 +54,9 @@
       </div>
       <div class="seven columns topnav-a right">
       
-       <a href="../blog/index.html">Blog</a>
+       <a tabindex=0 href="../blog/index.html">Blog</a>
       
-       <a href="../index.html">Ergon</a>
+       <a tabindex=0 href="../index.html">Ergon</a>
       
       
       </div>
@@ -73,11 +74,11 @@
    </a>
    <ul id="menu">
     <a class="hamburger-shell"></a>
-    <a href="https://ergon.moe/index.html"><li>Home</li></a>
+    <li><a href="https://ergon.moe/index.html">Home</a></li>
     
-    <a href="../blog/index.html"><li>Blog</li></a>
+    <li><a href="../blog/index.html">Blog</a></li>
     
-    <a href="../index.html"><li>Ergon</li></a>
+    <li><a href="../index.html">Ergon</a></li>
     
     <li></li>
    </ul>
@@ -92,7 +93,7 @@
      <h4 class="hero-title">The winner of the community competition:</h4>
     </div>
     <div class"row " style="margin:auto;width:90%">
-        <p class="hero-title">Your ad here</p>
+        <p class="hero-title">Your ad here if you win</p>
     </div>
    </div>
   </div>
@@ -111,7 +112,22 @@
    <div class="container">
     <div class="row">
      <div style='color:dimgray'>Licho, 2023-08-17</div> <br>
-     <p><em>Update (2023-11-21):</em> The article contained an error in the calculation of particular escape velocities. It has been corrected and expanded to show where the numbers came from.</p>
+     <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+  integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs"
+  crossorigin="anonymous" />
+
+<style type="text/css">
+    .katex img {
+      object-fit: fill;
+      padding: unset;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+</style>
+<p><em>Update (2023-11-21):</em> The article contained an error in the calculation of particular escape velocities. It has been corrected and expanded to show where the numbers came from.</p>
 <p>The common theme of the cryptocurrency space is <strong>the hard supply cap</strong>. Cryprocurrencies and tokens often have a fixed number of units to ever come to existence. By the simple reasoning, if there is a fixed number of units then it must be scarce, therefore valuable, right? Is 21 million units of Bitcoin a lot? People often say things like <strong>"There are 8 billion people in the world, so it's not enough for everyone to have 1 Bitcoin"</strong> silently assuming the big win scenario - everyone will want it. In the space of thousands of cryptocurrencies that we have today, any of them still follows this logic and proclaims itself the future "winner". In fact,  cryptocurrencies rely on this logic with their survival, implementing diminishing reward that will eventually disappear.</p>
 <h2>How much is much?</h2>
 <p>This question doesn't make sense without a context. Value is an equilibrium between two factors - both supply and demand. We compare the amount to the size of the market for it. 100 apartamnt buildings is a very different number in a small town than it is in a metropoly.</p>
@@ -124,7 +140,7 @@
 <h2>Escape Velocity</h2>
 <p>To actually depict how restricted it is, we need to revert to the notions familiar to the person coming from cryptocurrency background, also easily understandable to a no-coiner. Escape velocity is the speed an object has to get to go into an orbit or beyond it. Similarly, we will use this for a sort of supply cap.</p>
 <p>If the technological progress would suddenly stop and Ergon would forever have the hashrate it has at the halt point, the Moore's law correction would make it just a regular cryptocurrency with a hard cap. Now, using this ultimate hashrate as a parameter, we can get a picture of how restrictive the supply it. The formula is <code>current supply +factor x hashrate</code>.</p>
-<p>Let's see some numbers (as of 2023-11-21). <code>Current supply</code> is about 33ⵟ and the <code>factor</code> is around 0.0384  $<code>\frac{ⵟ}{Thps}</code>$. To see the derivation details, check out the <a href="#derivation">next paragraph</a>.</p>
+<p>Let's see some numbers (as of 2023-11-21). <code>Current supply</code> is about 33ⵟ and the <code>factor</code> is around 0.0384  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>ⵟ</mtext><mrow><mi>T</mi><mi>h</mi><mi>p</mi><mi>s</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{ⵟ}{Thps}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8751em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.394em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight">h</span><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">s</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">ⵟ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>. To see the derivation details, check out the <a href="#derivation">next paragraph</a>.</p>
 <table>
 <thead>
 <tr>
@@ -157,21 +173,53 @@
 
 <p>This is a bonus paragraph for the people who'd want to see where it comes from.
 We sum up all of the diminishing rewards.</p>
-<p>The reward rate $<code>R = e^{-\ln2 \frac{t-t_0}{\tau}}\times 365 r \times H</code>$, where $<code>r</code>$ is the daily reward (you can take the current one from <a href="https://pool.ergon.network">Ergon Network Pool</a>, it's the last number), $<code>\tau = 2.3y</code>$ is the halving time and $<code>H</code>$ is hashrate. 365 appears because $<code>r</code>$ is in the unit of $<code>\frac{ⵟ}{Thps\times\text{day}}</code>$ while the halving time is in years.</p>
+<p>The reward rate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>ln</mi><mo>⁡</mo><mn>2</mn><mfrac><mrow><mi>t</mi><mo>−</mo><msub><mi>t</mi><mn>0</mn></msub></mrow><mi>τ</mi></mfrac></mrow></msup><mo>×</mo><mn>365</mn><mi>r</mi><mo>×</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">R = e^{-\ln2 \frac{t-t_0}{\tau}}\times 365 r \times H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1301em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0468em;"><span style="top:-3.363em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mop mtight"><span class="mtight">l</span><span class="mtight">n</span></span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mtight">2</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9769em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.5375em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:0em;margin-right:0.1em;"><span class="pstrut" style="height:2.6444em;"></span><span class="mord mtight">0</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2996em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">365</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span>, where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> is the daily reward (you can take the current one from <a href="https://pool.ergon.network">Ergon Network Pool</a>, it's the last number), <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mn>2.3</mn><mi>y</mi></mrow><annotation encoding="application/x-tex">\tau = 2.3y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">2.3</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> is the halving time and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span> is hashrate. 365 appears because <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> is in the unit of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>ⵟ</mtext><mrow><mi>T</mi><mi>h</mi><mi>p</mi><mi>s</mi><mo>×</mo><mtext>day</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{ⵟ}{Thps\times\text{day}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8751em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.394em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight">h</span><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">s</span><span class="mbin mtight">×</span><span class="mord text mtight"><span class="mord mtight">day</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">ⵟ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> while the halving time is in years.</p>
 <p>To sum the rewards together, we integrate the equation from now to infinity.</p>
-<p><code>math
-T=\int_{t_0}^{\infty}e^{-\ln2 \frac{t-t_0}{\tau}}\times  365 r  \times H dt</code>
-Where $<code>T</code>$ is <code>total</code>, </p>
+<p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>T</mi><mo>=</mo><msubsup><mo>∫</mo><msub><mi>t</mi><mn>0</mn></msub><mi mathvariant="normal">∞</mi></msubsup><msup><mi>e</mi><mrow><mo>−</mo><mi>ln</mi><mo>⁡</mo><mn>2</mn><mfrac><mrow><mi>t</mi><mo>−</mo><msub><mi>t</mi><mn>0</mn></msub></mrow><mi>τ</mi></mfrac></mrow></msup><mo>×</mo><mn>365</mn><mi>r</mi><mo>×</mo><mi>H</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">
+T=\int_{t_0}^{\infty}e^{-\ln2 \frac{t-t_0}{\tau}}\times  365 r  \times H dt
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4263em;vertical-align:-1.012em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.012em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0968em;"><span style="top:-3.413em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mop mtight"><span class="mtight">l</span><span class="mtight">n</span></span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mtight">2</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9769em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.5375em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:0em;margin-right:0.1em;"><span class="pstrut" style="height:2.6444em;"></span><span class="mord mtight">0</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2996em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">365</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span></span></p>
+Where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> is <code>total</code>, </p>
 <p>The result of the integration to infinity is:</p>
 <p><code>total</code> = <code>current supply</code> + (<code>halving time</code>/ln2) * 365 * <code>daily reward</code> * <code>hashrate</code></p>
 <p>We will call the factor in front of <code>hashrate</code> the <code>factor</code>.</p>
 <p><code>halving time</code> = 2.3y,</p>
-<p><code>daily reward</code> (as of 2023-11-21)= 0.00003168$<code>\frac{ⵟ}{Thps\times\text{day}}</code>$,</p>
+<p><code>daily reward</code> (as of 2023-11-21)= 0.00003168<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>ⵟ</mtext><mrow><mi>T</mi><mi>h</mi><mi>p</mi><mi>s</mi><mo>×</mo><mtext>day</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{ⵟ}{Thps\times\text{day}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8751em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.394em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight">h</span><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">s</span><span class="mbin mtight">×</span><span class="mord text mtight"><span class="mord mtight">day</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">ⵟ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>,</p>
 <p><code>ln2</code> = 0.693,</p>
-<p>The <code>factor</code> is equal to 0.0384 $<code>\frac{ⵟ}{Thps}</code>$.</p>
+<p>The <code>factor</code> is equal to 0.0384 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mtext>ⵟ</mtext><mrow><mi>T</mi><mi>h</mi><mi>p</mi><mi>s</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{ⵟ}{Thps}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8751em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.394em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight">h</span><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">s</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">ⵟ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>.</p>
     </div>
    </div>
   </div>
+
+  <div class="section">
+   <div class="container">
+    <div class="row">
+     <form class="fsb-prompt">
+      <label>Share this page from your fediverse server</label>
+      <div class="fsb-input-group mb-3">
+       <span class="fsb-input-group-text">https://</span>
+        <input required
+         type="text"
+         name="fediverse-domain"
+         placeholder="mastodon.social"
+         class="fsb-input fsb-domain"
+         aria-label="Server domain">
+         <button class="fsb-button"
+          type="submit"><img src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/icons/mastodon.svg"
+          class="fsb-icon"></span>Share</button>
+      </div>
+      <p class="fsb-support-note fsb-d-none">This server does not support sharing. Please visit
+       <a
+       class="fsb-support-note-link"
+       target="_blank"
+       href=""></a>.
+      </p>
+     </form>
+    </div>
+   </div>
+  </div>
+  <script src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/script.min.js" defer class="fsb-script"></script>
+
+
   
   <div class="section hero">
    <div class="container">

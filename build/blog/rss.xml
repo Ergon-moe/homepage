@@ -12,6 +12,33 @@
   <description>P2P stable electronic cash</description>
   
   <item>
+    <title>The problem with fees Part 2</title>
+    <link>https://ergon.moe/blog/The%20problem%20with%20fees%20Part%202_Licho_2024-02-19.html</link>
+    <guid>https://ergon.moe/blog/The%20problem%20with%20fees%20Part%202_Licho_2024-02-19.html</guid>
+    <description>In the previous article The problem with fees I showed that the current mechanism of...</description>
+    <author>Licho</author>
+    <pubDate>Sun, 18 Feb 2024 23:00:00 -0000</pubDate>
+  </item>
+  
+  <item>
+    <title>The problem with fees</title>
+    <link>https://ergon.moe/blog/The%20problem%20with%20fees_Licho_2024-02-18.html</link>
+    <guid>https://ergon.moe/blog/The%20problem%20with%20fees_Licho_2024-02-18.html</guid>
+    <description>This article&apos;s goal is to investigate the Ergon&apos;s fee burning mechanism in the face of...</description>
+    <author>Licho</author>
+    <pubDate>Sat, 17 Feb 2024 23:00:00 -0000</pubDate>
+  </item>
+  
+  <item>
+    <title>On security</title>
+    <link>https://ergon.moe/blog/On%20security_Licho_2024-02-11.html</link>
+    <guid>https://ergon.moe/blog/On%20security_Licho_2024-02-11.html</guid>
+    <description>Even though Ergon changes only the supply design, the consequences are massive. Not only for...</description>
+    <author>Licho</author>
+    <pubDate>Sat, 10 Feb 2024 23:00:00 -0000</pubDate>
+  </item>
+  
+  <item>
     <title>Ergon Supply Shrinking</title>
     <link>https://ergon.moe/blog/Ergon%20Supply%20Shrinking_Licho_2023-10-17.html</link>
     <guid>https://ergon.moe/blog/Ergon%20Supply%20Shrinking_Licho_2023-10-17.html</guid>

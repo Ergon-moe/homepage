@@ -7,10 +7,10 @@
       </div>
       <div class="seven columns topnav-a right">
       {% for item in nav %}
-       <a {{item.href}}>{{item.caption}}</a>
+       <a tabindex=0 {{item.href}}>{{item.caption}}</a>
       {% endfor %}
       {% for item in langs %}
-       <a {{item.href}}>{{item.caption}}</a>
+       <a tabindex=0 {{item.href}}>{{item.caption}}</a>
       {% endfor %}
       </div>
      </div>
@@ -27,9 +27,9 @@
    </a>
    <ul id="menu">
     <a class="hamburger-shell"></a>
-    <a href="https://ergon.moe/index.html"><li>Home</li></a>
+    <li><a href="https://ergon.moe/index.html">Home</a></li>
     {% for item in nav2 %}
-    <a {{item.href}}><li>{{item.caption}}</li></a>
+    <li><a {{item.href}}>{{item.caption}}</a></li>
     {% endfor %}
     <li>{% for item in langs %}
     <a {{item.href}}>{{item.caption }}</a> 

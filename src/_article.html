@@ -3,6 +3,7 @@
   <link href="../css/normalize.css" rel="stylesheet"/>
   <link href="../css/skeleton.css" rel="stylesheet"/>
   <link href="../css/main.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/styles.min.css">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="../images/icon.png" rel="icon" type="image/png"/>
@@ -47,6 +48,37 @@
     </div>
    </div>
   </div>
+
+  <div class="section">
+   <div class="container">
+    <div class="row">
+     <form class="fsb-prompt">
+      <label>Share this page from your fediverse server</label>
+      <div class="fsb-input-group mb-3">
+       <span class="fsb-input-group-text">https://</span>
+        <input required
+         type="text"
+         name="fediverse-domain"
+         placeholder="mastodon.social"
+         class="fsb-input fsb-domain"
+         aria-label="Server domain">
+         <button class="fsb-button"
+          type="submit"><img src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/icons/mastodon.svg"
+          class="fsb-icon"></span>Share</button>
+      </div>
+      <p class="fsb-support-note fsb-d-none">This server does not support sharing. Please visit
+       <a
+       class="fsb-support-note-link"
+       target="_blank"
+       href=""></a>.
+      </p>
+     </form>
+    </div>
+   </div>
+  </div>
+  <script src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/script.min.js" defer class="fsb-script"></script>
+
+
   {#
   <div class="section">
    <div class="container">

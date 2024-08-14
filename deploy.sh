@@ -1,2 +1,2 @@
 #! /bin/zsh
-scp -r build/. karol@ergon.moe:new_www/
+scp -r build/. licho@ergon.moe:www/
